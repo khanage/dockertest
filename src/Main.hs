@@ -8,6 +8,6 @@ import           Web.Scotty
 main :: IO ()
 main = do
   env <- lookupEnv "THING"
-  scotty 3000 $ do
+  scotty 80 $ do
     get "/" (text (T.pack (maybe "couldn't load THING" id env)))
 
